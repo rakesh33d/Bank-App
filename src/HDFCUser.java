@@ -20,6 +20,46 @@ public class HDFCUser implements BankInterface{
         this.accountNo = String.valueOf(UUID.randomUUID());
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAccountNo() {
+        return accountNo;
+    }
+
+    public void setAccountNo(String accountNo) {
+        this.accountNo = accountNo;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    public static double getRateOfInterest() {
+        return rateOfInterest;
+    }
+
+    public static void setRateOfInterest(double rateOfInterest) {
+        HDFCUser.rateOfInterest = rateOfInterest;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public double checkBalance() {
         return balance;

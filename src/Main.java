@@ -1,20 +1,27 @@
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         Scanner sc= new Scanner(System.in);
+
+       // System.out.println("Please choose bank from SBI and HDFC : ");
+       // String bank = sc.next();
+
         System.out.println("Enter your name,password,balance to create a account");
         //create user
 
         String name=sc.nextLine();
         String password=sc.nextLine();
         double balance=sc.nextDouble();
+
         SBIUser user = new SBIUser(name,balance,password);
 
+        System.out.println("Account created with account no. : "+String.valueOf(user.getAccountNo()));
         //add money
         System.out.println("enter amount you want to add ");
         int amt=sc.nextInt();
-String message= user.addMoney(amt);
+        String message= user.addMoney(amt);
         System.out.println(message);
 
         //withdraw money
